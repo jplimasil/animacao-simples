@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    background: url(./imagens/baixados.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.night{
+    height: 80vh;
+    width: 70vw;
+    border: 1px solid black;
+    background: url(imagens/ceu.jpg);
+    background-size: cover;
+    position: relative;
+    box-shadow: 1px 2px 60px rgba(0, 0, 0, 4);
+    overflow-x: hidden;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.surface{
+    height: 62px;
+    width: 8000%;
+    background: url(imagens/ground.jpg);
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-repeat: repeat-x;
+    animation: moveRight 4s linear infinite;
+}
+
+.car{
+    position: absolute;
+    bottom: 5%;
+    left: 14%;
+    animation: suspension 1.2s linear infinite;
+}
+
+@keyframes moveRight {
+    100%{transform: translateX(-2950px);}
+}
+
+@keyframes suspension {
+    100%{
+        transform: translateY(-1px);
+    }
+    50%{
+        transform: translateY(-4px);
+    }
+    0%{
+        transform: translateY(-1px);
+    }
+    
+}
+
+@media (max-width: 448.98px){
+    .night{
+        width: 80%;
+        height: 80%;
+    }
+
+    img{
+        width: 70%;
+    }
+
+    .car{
+        left: 10%;
+    }
+
+}
